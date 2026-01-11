@@ -13,7 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-
+    int num = 0;
     TextView text;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,5 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void go(View view) {
         text.setText("Oh, yea, I’ve been clicked!");
+        num += 1;
+        text.setText("This is a click number:"+ num);
     }
 }
