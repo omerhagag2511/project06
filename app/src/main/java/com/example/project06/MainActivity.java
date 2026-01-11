@@ -24,14 +24,22 @@ public class MainActivity extends AppCompatActivity {
 
     public void go(View view) {
         num += 1;
-        text.setText("This is a click number:"+ num);
 
         if (num <= 6) {
             text.setText("This is a click number:"+ num);
         }
-        else{
+        else {
             text.setText("Enough to click. Go to new start!");
-            num = 0;
+            if (num % 7 == 0) {
+                text.setText("BOOM!");
+                num = 0;
+            } else if (num % 10 == 7) {
+                text.setText("BOOM!");
+            } else if ((num > 69) && (num < 80)) {
+                text.setText("BOOM!");
+            } else {
+                text.setText("This is a click number:" + num);
+            }
         }
     }
 }
