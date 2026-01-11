@@ -23,8 +23,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void go(View view) {
-        text.setText("Oh, yea, I’ve been clicked!");
         num += 1;
         text.setText("This is a click number:"+ num);
+
+        if (num <= 6) {
+            text.setText("This is a click number:"+ num);
+        }
+        else{
+            text.setText("Enough to click. Go to new start!");
+            num = 0;
+        }
     }
 }
