@@ -29,10 +29,8 @@ public class MainActivity extends AppCompatActivity {
             text.setText("This is a click number:"+ num);
         }
         else {
-            text.setText("Enough to click. Go to new start!");
             if (num % 7 == 0) {
                 text.setText("BOOM!");
-                num = 0;
             } else if (num % 10 == 7) {
                 text.setText("BOOM!");
             } else if ((num > 69) && (num < 80)) {
